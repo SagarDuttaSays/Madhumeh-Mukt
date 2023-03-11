@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+
+    <link rel="stylesheet" type="text/css" href="resources/css/register.css">
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" type="text/css" href="resources/css/profile.css">
+
+    <!-- FontAwesome 5 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    
+</head>
+<body>
+    <!-- Navbar top -->
+    <div class="navbar-top">
+        <div class="logo">
+            <img src="resources/images/LogoTransparent.png" alt="" width="230">
+        </div>
+        <div class="title">
+            <h2>DEMOGRAPHIC INFORMATION</h2>
+        </div>
+    </div>
+    <!-- End -->
+
+    <!-- Main -->
+    <div class="main">
+        <div class="card">
+            <div class="card-body">
+                        <form class="modal-content" action="/edit" method="post">
+                            <div class="container">
+                              <p><label>Kindly update your demographics</label></p>
+                              <hr>
+                              <table>
+                                <tr>
+                                    <th><label>USERNAME</label></th>
+                                    <td><input type="text" name="username" value="<%= demographics.username %>" required></td>
+                                </tr>
+                                <tr>
+                                    <th><label>PASSWORD</label></th>
+                                    <td><input type="text" name="password" value="<%= demographics.password %>" required></td>
+                                </tr>
+                                <tr>
+                                    <th><label>NAME</label></th>
+                                    <td><input name="pname" id="pname" value="<%= demographics.name %>" type="text" required></td>
+                                </tr>
+                                <tr>
+                                    <th><label>DOB</label></th>
+                                    <td><input name="pdob" id="pdob" value="<%= demographics.dob %>" type="date" required></td>
+                                </tr>
+                                <tr>
+                                    <th><label>GENDER</label></th>
+                                    <td><input name="pgender" id="pgender" value="<%= demographics.gender %>" type="text" required></td>
+                                </tr>
+                                <tr>
+                                    <th><label>AGE</label></th>
+                                    <td><input name="page" id="page" value="<%= demographics.age %>" type="number" required></td>
+                                </tr>
+                                <tr>
+                                    <th><label>EMAIL ID</label></th>
+                                    <td><input name="pemail" id="pemail" value="<%= demographics.email %>" type="email" required></td>
+                                </tr>
+                                <tr>
+                                    <th><label>PHONE</label></th>
+                                    <td><input name="pphone" id="pphone" value="<%= demographics.phone %>" type="number" required></td>
+                                </tr>
+                                <tr>
+                                    <th><label>ADDRESS</label></th>
+                                    <td><input name="paddress" id="paddress" value="<%= demographics.address %>" type="text" required></td>
+                                </tr>
+                              </table>
+                        
+                              <div class="clearfix">
+                                <button type="reset" class="cancelbtn"><h4>Reset</h4></button>
+                                <button class="signupbtn"><h4>Update</h4></button>
+                              </div>
+                            </div>
+                          </form>
+            </div>
+        </div>
+    </div>
+    <!-- End -->
+</body>
+</html>

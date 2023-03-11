@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" type="text/css" href="resources/css/profile.css">
+
+    <!-- FontAwesome 5 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    
+</head>
+<body>
+    <!-- Navbar top -->
+    <div class="navbar-top">
+        <div class="logo">
+            <img src="resources/images/LogoTransparent.png" alt="" width="230">
+        </div>
+        <div class="title">
+            <h1>Profile</h1>
+        </div>
+    </div>
+    <!-- End -->
+
+    <!-- Sidenav -->
+    <div class="sidenav">
+        <div class="profile">
+            <div class="name">
+                <%= demographics.username %>
+            </div>
+        </div>
+
+        <div class="sidenav-url">
+            <div class="url">
+                <a href="/test" class="active">Test</a>
+                <hr align="center">
+            </div>
+            <div class="url">
+                <a href="/logout">Logout</a>
+                <hr align="center">
+            </div>
+        </div>
+    </div>
+    <!-- End -->
+
+    <!-- Main -->
+    <div class="main">
+        <h2>DEMOGRAPHIC DATA</h2>
+        <div class="card">
+            <div class="card-body">
+                <a href="/edit"><i class="fa fa-pen fa-xs edit"></i></a>
+                <form class="modal-content" action="/edit" method="post">
+                    <div class="container">
+                      <table>
+                        <tr>
+                            <th><label>NAME</label></th>
+                            <td><input name="pname" id="pname" value="<%= demographics.name %>" type="text" readonly></td>
+                        </tr>
+                        <tr>
+                            <th><label>DOB</label></th>
+                            <td><input name="pdob" id="pdob" value="<%= demographics.dob %>" type="date" readonly></td>
+                        </tr>
+                        <tr>
+                            <th><label>GENDER</label></th>
+                            <td><input name="pgender" id="pgender" value="<%= demographics.gender %>" type="text" readonly></td>
+                        </tr>
+                        <tr>
+                            <th><label>AGE</label></th>
+                            <td><input name="page" id="page" value="<%= demographics.age %>" type="number" readonly></td>
+                        </tr>
+                        <tr>
+                            <th><label>EMAIL ID</label></th>
+                            <td><input name="pemail" id="pemail" value="<%= demographics.email %>" type="email" readonly></td>
+                        </tr>
+                        <tr>
+                            <th><label>PHONE</label></th>
+                            <td><input name="pphone" id="pphone" value="<%= demographics.phone %>" type="number" readonly></td>
+                        </tr>
+                        <tr>
+                            <th><label>ADDRESS</label></th>
+                            <td><input name="paddress" id="paddress" value="<%= demographics.address %>" type="text" readonly></td>
+                        </tr>
+                      </table>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+    <!-- End -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
